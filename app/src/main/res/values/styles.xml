@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="MyThemeBlue">
+        <!-- Customize your theme here. -->
+    </style>
+    <!-- 蓝色为主色调 -->
+    <style name="MyThemeBlue" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!--选中状态icon的颜色和字体颜色-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <!--正常状态下字体颜色和icon颜色-->
+        <item name="android:textColorPrimary">@color/main_white</item>
+
+    </style>
+
+    <style name="ToolBarTheme" parent="@style/ThemeOverlay.AppCompat.Light">
+        <item name="android:textColorSecondary">@color/main_white</item>
+    </style>
+
+    <style name="OverflowPopupMenu" parent="@style/Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:colorBackground">@color/primary</item>
+    </style>
+</resources>

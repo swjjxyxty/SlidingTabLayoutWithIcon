@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ViewSwitcher
+        android:id="@+id/home_action_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:background="?colorPrimary"
+        android:minHeight="?actionBarSize">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/home_toolbar"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:popupTheme="@style/OverflowPopupMenu"
+            app:theme="@style/ToolBarTheme">
+
+            <com.xty.slidingtablayout.view.SlidingTabLayout
+                android:id="@+id/home_sliding_tab"
+                android:layout_width="250.0dip"
+                android:layout_height="?actionBarSize"/>
+        </android.support.v7.widget.Toolbar>
+
+    </ViewSwitcher>
+
+    <FrameLayout
+        android:id="@+id/home_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/home_action_bar">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/home_screen_view_pager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+    </FrameLayout>
+
+
+</RelativeLayout>
