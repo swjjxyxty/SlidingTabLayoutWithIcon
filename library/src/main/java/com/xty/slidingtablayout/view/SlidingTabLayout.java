@@ -4,7 +4,6 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.os.Build;
 import android.support.annotation.IdRes;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
@@ -136,7 +135,7 @@ public class SlidingTabLayout extends HorizontalScrollView {
      *
      * @param colors int color value
      */
-    public void setSelectedIndicatorColors(@NonNull int... colors) {
+    public void setSelectedIndicatorColors(int... colors) {
         mTabStrip.setSelectedIndicatorColors(colors);
     }
 
@@ -147,15 +146,14 @@ public class SlidingTabLayout extends HorizontalScrollView {
      *
      * @param colors int color value
      */
-    public void setDividerColors(@NonNull int... colors) {
+    public void setDividerColors(int... colors) {
         mTabStrip.setDividerColors(colors);
     }
 
     /**
      * set viewpager listener
      *
-     * @param listener
-     * @see android.support.v4.view.ViewPager.OnPageChangeListener
+     * @param listener android.support.v4.view.ViewPager.OnPageChangeListener
      */
     public void setOnPageChangeListener(ViewPager.OnPageChangeListener listener) {
         mViewPagerPageChangeListener = listener;
@@ -167,7 +165,7 @@ public class SlidingTabLayout extends HorizontalScrollView {
      * @param layoutResId layout file resId
      * @param imageViewId imageview resId
      */
-    public void setCustomTabView(@LayoutRes int layoutResId, @IdRes int imageViewId) {
+    public void setCustomTabView(int layoutResId, int imageViewId) {
         mTabViewLayoutId = layoutResId;
         mTabViewImageViewId = imageViewId;
     }
@@ -175,8 +173,7 @@ public class SlidingTabLayout extends HorizontalScrollView {
     /**
      * set viewpager
      *
-     * @param viewPager
-     * @see ViewPager
+     * @param viewPager ViewPager
      */
     public void setViewPager(ViewPager viewPager) {
         mTabStrip.removeAllViews();
