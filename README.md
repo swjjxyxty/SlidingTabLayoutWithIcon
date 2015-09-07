@@ -49,37 +49,37 @@ Add `com.xty.slidingtablayout.view.SlidingTabLayout` to layout file
 Let you adpater class implements TabIconProvider
 
 ```java
-	public class TabViewPagerAdapter extends PagerAdapter implements SlidingTabLayout.TabIconProvider{
-		
-		@Override
-	    public int getPageIconResId(int position) {
-	        switch (position) {
-	            case 0:
-	                return R.drawable.ic_tab_alarms;
-	            case 2:
-	                return R.drawable.ic_tab_stats;
-	            case 1:
-	                return R.drawable.ic_tab_leaderboard;
-	        }
-	        return 0;
-	    }
+public class TabViewPagerAdapter extends PagerAdapter implements SlidingTabLayout.TabIconProvider{
+	
+	@Override
+    public int getPageIconResId(int position) {
+        switch (position) {
+            case 0:
+                return R.drawable.ic_tab_alarms;
+            case 2:
+                return R.drawable.ic_tab_stats;
+            case 1:
+                return R.drawable.ic_tab_leaderboard;
+        }
+        return 0;
+    }
 
-		@Override
-	    public void destroyItem(ViewGroup container, int position, Object object) {
-	        ......
-	    }
+	@Override
+    public void destroyItem(ViewGroup container, int position, Object object) {
+        ......
+    }
 
-		@Override
-    	public Object instantiateItem(ViewGroup container, int position) {
-			......
-			return view;
-		}
-
- 		@Override
-	    public boolean isViewFromObject(View view, Object o) {
-	        return .......;
-	    }
+	@Override
+	public Object instantiateItem(ViewGroup container, int position) {
+		......
+		return view;
 	}
+
+		@Override
+    public boolean isViewFromObject(View view, Object o) {
+        return .......;
+    }
+}
 ```
 
 
